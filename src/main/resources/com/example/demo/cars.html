@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Scraped Cars</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-4 mb-4">Electric Cars</h1>
+  <ul class="list-group">
+    <li th:each="car : ${cars}" class="list-group-item">
+      <span th:text="${car.name}"></span> - <span th:text="${car.price}"></span>
+    </li>
+  </ul>
+</div>
+<!-- Bootstrap JS (optional, for certain components) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
